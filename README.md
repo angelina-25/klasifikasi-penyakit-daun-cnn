@@ -1,6 +1,10 @@
 
 # Klasifikasi Penyakit Daun Tanaman
 
+Kelompok 9 :
+1. Dewi Astuti 2409106007
+2. Angelina Augustin Umami 2409106014
+   
 Aplikasi klasifikasi penyakit daun tanaman menggunakan metode Custom Convolutional Neural Network (CNN) dan dataset PlantVillage.
 
 ## Kelas Klasifikasi
