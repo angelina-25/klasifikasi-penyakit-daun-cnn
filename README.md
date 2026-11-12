@@ -1,5 +1,5 @@
 
-# 🌿 Klasifikasi Penyakit Daun Tanaman
+# Klasifikasi Penyakit Daun Tanaman
 
 Aplikasi klasifikasi penyakit daun tanaman menggunakan metode Custom Convolutional Neural Network (CNN) dan dataset PlantVillage.
 
