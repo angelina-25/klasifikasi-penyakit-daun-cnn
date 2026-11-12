@@ -1,0 +1,20 @@
+{
+  "img_size": [
+    128,
+    128
+  ],
+  "kelas": [
+    "Apple___Apple_scab",
+    "Apple___healthy",
+    "Corn_(maize)___Common_rust_",
+    "Potato___Late_blight",
+    "Tomato___healthy"
+  ],
+  "label_tampilan": {
+    "Apple___Apple_scab": "Apel - Apple Scab",
+    "Apple___healthy": "Apel - Sehat",
+    "Corn_(maize)___Common_rust_": "Jagung - Karat Daun",
+    "Potato___Late_blight": "Kentang - Hawar Daun Akhir",
+    "Tomato___healthy": "Tomat - Sehat"
+  }
+}
