@@ -6,10 +6,7 @@ import json
 from PIL import Image
 from pathlib import Path
 
-# ==================================
 # 1. KONFIGURASI APLIKASI
-# ==================================
-
 st.set_page_config(
     page_title="Deteksi Penyakit Daun",
     page_icon="🌿",
@@ -21,10 +18,7 @@ BASE_DIR = Path(__file__).parent
 MODEL_PATH = BASE_DIR / "cnn_plantvillage.keras"
 INFO_PATH = BASE_DIR / "info_kelas.json"
 
-# ==================================
 # 2. MEMUAT MODEL CNN
-# ==================================
-
 @st.cache_resource
 def load_model():
     return tf.keras.models.load_model(
@@ -32,19 +26,13 @@ def load_model():
         compile=False
     )
 
-# ==================================
 # 3. MEMUAT INFORMASI KELAS
-# ==================================
-
 @st.cache_data
 def load_class_info():
     with open(INFO_PATH, "r", encoding="utf-8") as file:
         return json.load(file)
 
-# ==================================
 # 4. TAMPILAN APLIKASI
-# ==================================
-
 st.title("🌿 Deteksi Penyakit Daun Tanaman")
 
 st.markdown(
@@ -65,10 +53,7 @@ uploaded_file = st.file_uploader(
     type=["jpg", "jpeg", "png"]
 )
 
-# ==================================
 # 5. PROSES KLASIFIKASI
-# ==================================
-
 if uploaded_file is not None:
 
     image = Image.open(uploaded_file).convert("RGB")
@@ -139,10 +124,7 @@ if uploaded_file is not None:
                     prediction[0][predicted_index]
                 ) * 100
 
-            # ==================================
             # 6. MENAMPILKAN HASIL PREDIKSI
-            # ==================================
-
             st.divider()
 
             st.subheader("📊 Hasil Klasifikasi")
@@ -156,10 +138,7 @@ if uploaded_file is not None:
                 value=f"{confidence:.2f}%"
             )
 
-            # ==================================
             # 7. PROBABILITAS SETIAP KELAS
-            # ==================================
-
             st.subheader("Probabilitas Setiap Kelas")
 
             urutan = np.argsort(
@@ -196,10 +175,7 @@ if uploaded_file is not None:
 
             st.exception(error)
 
-# ==================================
 # 8. FOOTER
-# ==================================
-
 st.divider()
 
 st.caption(
